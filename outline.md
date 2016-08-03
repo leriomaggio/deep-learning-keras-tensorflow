@@ -38,7 +38,7 @@
         -  RNN + CNN
     - Time Distributed Convolution 
     - Some of the recent advances in DL implemented in Keras
-        - e.g. 
+        - e.g. https://github.com/snf/keras-fractalnet - Fractal Net Implementation with Keras
 
 
 Notes:
