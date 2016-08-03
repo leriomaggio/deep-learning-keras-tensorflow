@@ -28,7 +28,6 @@
         - VGG19
         - LaNet
         - Inception/GoogleNet
-        - 
     
 - Part III: Unsupervised Learning + Keras Internals
     - AutoEncoders
@@ -38,3 +37,12 @@
     - RNN (LSTM)
         -  RNN + CNN
     - Time Distributed Convolution 
+    - Some of the recent advances in DL implemented in Keras
+        - e.g. 
+
+
+Notes:
+
+1) Please, add more details in Part IV (i.e. /Advanced Materials/)
+2) As for Keras internals, I Would consider this: https://github.com/wuaalb/keras_extensions/blob/master/keras_extensions/rbm.py
+This is just to show how easy it is to extend Keras ( in this case, properly creating a new `Layer`).
