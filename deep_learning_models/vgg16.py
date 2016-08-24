@@ -18,7 +18,7 @@ from keras.preprocessing import image
 from keras.utils.layer_utils import convert_all_kernels_in_model
 from keras.utils.data_utils import get_file
 from keras import backend as K
-from imagenet_utils import decode_predictions, preprocess_input
+# from imagenet_utils import decode_predictions, preprocess_input
 
 
 TH_WEIGHTS_PATH = 'https://github.com/fchollet/deep-learning-models/releases/download/v0.1/vgg16_weights_th_dim_ordering_th_kernels.h5'
