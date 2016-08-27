@@ -309,14 +309,14 @@ We provide in the materials a `deep-learning.yml` that is complete and **ready t
 #### A. Create the Environment
 
 ```
-conda create env -f deep-learning.yml  # this file is for Linux channels.
+conda env create -f deep-learning.yml  # this file is for Linux channels.
 ```
 
 If you're using a **Mac OSX**, we also provided in the repo the conda file 
 that is compatible with `osx-channels`:
 
 ```
-conda create env -f deep-learning-osx.yml  # this file is for OSX channels.
+conda env create -f deep-learning-osx.yml  # this file is for OSX channels.
 ```
 
 #### B. Activate the new `deep-learning` Environment
