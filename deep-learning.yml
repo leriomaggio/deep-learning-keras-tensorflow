@@ -148,7 +148,6 @@ dependencies:
   - setuptools==25.1.4
   - simplegeneric==0.8.1
   - six==1.10.0
-  - tensorflow==0.10.0rc0
   - terminado==0.6
   - theano==0.8.2
   - tornado==4.4.1
