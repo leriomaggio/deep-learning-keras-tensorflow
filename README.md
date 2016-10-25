@@ -3,9 +3,11 @@
     <h1 style="text-align: center;">Deep Learning with Keras and Tensorflow</h1>
     <img style="text-align: left" src="imgs/keras-tensorflow-logo.jpg" width="40%" />
 <div>
-
+<br/>
 <div>
-    <img style="text-align: left" src="imgs/pyss2016_logo.png" width="40%" alt="PySS 2016 Logo" />
+    <img style="text-align: left" src="imgs/bi_forum_logo.png" width="40%" alt="PySS 2016 Logo" />
+    <br />
+    <img style="text-align: left" src="imgs/bi_forum_buda.png" width="20%" alt="PySS 2016 Logo" />
 </div>    
 
 # Speaker: Valerio Maggio
@@ -52,7 +54,7 @@
 
 ## Source
 
-https://github.com/leriomaggio/deep-learning-keras-tensorflow-pyss2016/
+[https://github.com/leriomaggio/deep-learning-keras-tensorflow/tree/bi-forum2016](https://github.com/leriomaggio/deep-learning-keras-tensorflow/tree/bi-forum2016)
 
 *This tutorial is a new version of the [**Deep Learning with Keras**](https://github.com/leriomaggio/deep-learning-keras-euroscipy2016) Tutorial presented at EuroScipy 2016*
 
