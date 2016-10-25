@@ -1,26 +1,61 @@
 
 <div>
-    <h1 style="text-align: center;">Deep Learning with Keras</h1>
-    <img style="text-align: left" src="imgs/keras-logo-small.jpg" width="10%" />
+    <h1 style="text-align: center;">Deep Learning with Keras and Tensorflow</h1>
+    <img style="text-align: left" src="imgs/keras-tensorflow-logo.jpg" width="40%" />
 <div>
 
 <div>
-    <h2 style="text-align: center;">Tutorial @ EuroScipy 2016</h2>
-    <img style="text-align: left" src="imgs/euroscipy_2016_logo.png" width="40%" />
+    <img style="text-align: left" src="imgs/pyss2016_logo.png" width="40%" alt="PySS 2016 Logo" />
 </div>    
 
-##### Yam Peleg,  Valerio Maggio
+# Speaker: Valerio Maggio
+
+### _PostDoc Data Scientist @ FBK/MPBA_
+
+## Contacts:
+
+<table style="border: 0px; display: inline-table">
+    <tbody>
+        <tr style="border: 0px;">
+            <td style="border: 0px;">
+                <img src="imgs/twitter_small.png" style="display: inline-block;" /> 
+                [@leriomaggio](http://twitter.com/leriomaggio)
+            </td>
+            <td style="border: 0px;">
+                <img src="imgs/gplus_small.png" style="display: inline-block;" /> 
+                [+ValerioMaggio](http://plus.google.com/+ValerioMaggio)
+            </td>
+        </tr>
+        <tr style="border: 0px;">
+            <td style="border: 0px;">
+                <img src="imgs/linkedin_small.png" style="display: inline-block;" /> 
+                [it.linkedin.com/in/valeriomaggio]()
+            </td>
+            <td style="border: 0px;">
+                <img src="imgs/gmail_small.png" style="display: inline-block;" /> 
+                [vmaggio@fbk.eu]()
+            </td>
+       </tr>
+  </tbody>
+</table>
+
 
 # Goal of this Tutorial
 
 - **Introduce** main features of Keras
+    - Plus some introductory overview of Tensorflow
+    
 - **Learn** how simple and Pythonic is doing Deep Learning with Keras
-- **Understand** how easy is to do basic and *advanced* DL models in Keras;
+
+- **Understand** how easy is to do basic and *advanced* Deep Learning models in Keras;
     - **Examples and Hand-on Excerises** along the way.
 
 ## Source
 
-https://github.com/leriomaggio/deep-learning-keras-euroscipy2016/
+https://github.com/leriomaggio/deep-learning-keras-tensorflow-pyss2016/
+
+*This tutorial is a new version of the [**Deep Learning with Keras**](https://github.com/leriomaggio/deep-learning-keras-euroscipy2016) Tutorial presented at EuroScipy 2016*
+
 
 ---
 
@@ -37,13 +72,13 @@ https://github.com/leriomaggio/deep-learning-keras-euroscipy2016/
         - naive pure-Python implementation
         - fast forward, sgd, backprop
         
-    - Intro to Theano (`15 mins`)
-        - Model + SGD with Theano
+    - Intro to Tensorflow (`15 mins`)
+        - Model + SGD with Tensorflow
         
     - Introduction to Keras (`30 mins`)
         - Overview and main features
-            - Theano backend
             - Tensorflow backend
+            - Theano backend
         - Multi-Layer Perceptron and Fully Connected
             - Examples with `keras.models.Sequential` and `Dense`
             - HandsOn: MLP with keras
@@ -54,7 +89,7 @@ https://github.com/leriomaggio/deep-learning-keras-euroscipy2016/
     
     - Intro: Focus on Image Classification (`5 mins`)
 
-    - Intro to CNN (`25 mins`)
+    - Intro to ConvNets (`25 mins`)
         - meaning of convolutional filters
             - examples from ImageNet    
         - Meaning of dimensions of Conv filters (through an exmple of ConvNet) 
@@ -96,15 +131,17 @@ https://github.com/leriomaggio/deep-learning-keras-euroscipy2016/
 
 This tutorial requires the following packages:
 
-- Python version 3.4+ 
-    - likely Python 2.7 would be fine, but *who knows*? :P
+- Python version 3.5.x
+    - Python 3.4 should be fine as well
+    - likely Python 2.7 would be also fine, but *who knows*? :P
+    
 - `numpy` version 1.10 or later: http://www.numpy.org/
 - `scipy` version 0.16 or later: http://www.scipy.org/
 - `matplotlib` version 1.4 or later: http://matplotlib.org/
 - `pandas` version 0.16 or later: http://pandas.pydata.org
 - `scikit-learn` version 0.15 or later: http://scikit-learn.org
 - `keras` version 1.0 or later: http://keras.io
-- `theano` version 0.8 or later: http://deeplearning.net/software/theano/
+- `tensorflow` version 0.9 or later: https://www.tensorflow.org
 - `ipython`/`jupyter` version 4.0 or later, with notebook support
 
 (Optional but recommended):
@@ -142,9 +179,6 @@ We provide in the materials a `deep-learning.yml` that is complete and **ready t
 ```
 
     name: deep-learning
-    channels:
-    - conda-forge
-    - defaults
     dependencies:
     - accelerate=2.3.0=np111py35_3
     - accelerate_cudalib=2.0=0
@@ -279,7 +313,6 @@ We provide in the materials a `deep-learning.yml` that is complete and **ready t
       - protobuf==3.0.0b2
       - ptyprocess==0.5.1
       - pygments==2.1.3
-      - pygpu==0.2.1
       - pyparsing==2.1.7
       - python-dateutil==2.5.3
       - pytz==2016.6.1
@@ -292,7 +325,6 @@ We provide in the materials a `deep-learning.yml` that is complete and **ready t
       - setuptools==25.1.4
       - simplegeneric==0.8.1
       - six==1.10.0
-      - tensorflow==0.10.0rc0
       - terminado==0.6
       - theano==0.8.2
       - tornado==4.4.1
@@ -300,11 +332,19 @@ We provide in the materials a `deep-learning.yml` that is complete and **ready t
       - wcwidth==0.1.7
       - wheel==0.29.0
       - widgetsnbextension==1.2.6
-    prefix: /home/valerio/anaconda3/envs/deep-learning
     
 
 
+### Note on Tensorflow
+
+**Tensorflow** is not included into the environment file because it requires specific 
+installation packages that vary depending on the used platform.
+
+Please, see the next **Installing Tensorfow as backend** Section.
+
 # Recreate the Conda Environment
+
+**Note:** By the way, this is a quite standard `^[Machine|Deep]?Learning/Data Science$` environment in Python :)
 
 #### A. Create the Environment
 
@@ -329,7 +369,7 @@ source activate deep-learning
 
 ### 1. Enabling Conda-Forge
 
-It is strongly suggested to enable [**conda forge**](https://conda-forge.github.io/) in your Anaconda installation.
+It is highly suggested to enable [**conda forge**](https://conda-forge.github.io/) in your Anaconda installation.
 
 **Conda-Forge** is a github organisation containing repositories of conda recipies.
 
@@ -339,41 +379,82 @@ To add `conda-forge` as an additional anaconda channel it is just required to ty
 conda config --add channels conda-forge
 ```
 
-### 2. Configure Theano
+### 2. Installing Tensorflow as backend 
 
-1) Create the `theanorc` file:
-
-```shell
-touch $HOME/.theanorc
-```
-
-2) Copy the following content into the file:
-
-```
-[global]
-floatX = float32
-device = gpu  # switch to cpu if no GPU is available on your machine
-
-[nvcc]
-fastmath = True
-
-[lib]
-cnmem=.90
-```
-
-**More on [theano documentation](http://theano.readthedocs.io/en/latest/library/config.html)**
-
-### 3. Installing Tensorflow as backend 
+#### Example 1. Ubuntu/Linux 64bit and Python 3.5
 
 ```shell
 # Ubuntu/Linux 64-bit, GPU enabled, Python 3.5
 # Requires CUDA toolkit 7.5 and CuDNN v4. For other versions, see "Install from sources" below.
 export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.10.0rc0-cp35-cp35m-linux_x86_64.whl
+```
 
+**OR**
+
+```shell
+# Ubuntu/Linux 64-bit, CPU only, Python 3.5
+export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.10.0-cp35-cp35m-linux_x86_64.whl
+```
+
+**AND** then
+
+```shell
 pip install --ignore-installed --upgrade $TF_BINARY_URL
 ```
 
+#### Example 2. Mac OSX CPU and Python 3.5
+
+```shell
+# Mac OS X, GPU enabled, Python 3.4 or 3.5:
+export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/gpu/tensorflow-0.10.0-py3-none-any.whl
+```
+
+**OR**
+
+```shell
+# Mac OS X, CPU only, Python 3.4 or 3.5:
+export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.10.0-py3-none-any.whl
+```
+
+**AND** then
+
+```shell
+pip install --ignore-installed --upgrade $TF_BINARY_URL
+
+```
+
 **More on [tensorflow documentation](https://www.tensorflow.org/versions/r0.10/get_started/os_setup.html)**
+
+### 3. Configure Keras with tensorflow
+
+1) Create the `keras.json` (if it does not exist):
+
+```shell
+touch $HOME/.keras/keras.json
+```
+
+2) Copy the following content into the file:
+
+```
+{
+    "epsilon": 1e-07,
+    "backend": "tensorflow",
+    "floatx": "float32",
+    "image_dim_ordering": "tf"
+}
+```
+
+
+```python
+!cat ~/.keras/keras.json
+```
+
+    {
+        "backend": "tensorflow",
+        "epsilon": 1e-07,
+        "floatx": "float32",
+        "image_dim_ordering": "tf"
+    }
 
 ---
 
@@ -395,8 +476,7 @@ import sklearn
 import keras
 ```
 
-    Using Theano backend.
-    Using gpu device 0: GeForce GTX 760 (CNMeM is enabled with initial size: 90.0% of memory, cuDNN 4007)
+    Using TensorFlow backend.
 
 
 ## 2. Check installeded Versions
@@ -423,7 +503,7 @@ print('scikit-learn:', sklearn.__version__)
     scipy: 0.18.0
     matplotlib: 1.5.2
     iPython: 5.1.0
-    scikit-learn: 0.17.1
+    scikit-learn: 0.18
 
 
 
@@ -431,17 +511,17 @@ print('scikit-learn:', sklearn.__version__)
 import keras
 print('keras: ', keras.__version__)
 
+# optional
 import theano
 print('Theano: ', theano.__version__)
 
-# optional
 import tensorflow as tf
 print('Tensorflow: ', tf.__version__)
 ```
 
     keras:  1.0.7
     Theano:  0.8.2
-    Tensorflow:  0.10.0rc0
+    Tensorflow:  0.10.0
 
 
 <br>
