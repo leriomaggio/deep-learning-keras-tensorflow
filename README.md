@@ -1,4 +1,5 @@
 
+
 <div>
     <h1 style="text-align: center;">Deep Learning with Keras</h1>
     <img style="text-align: left" src="imgs/keras-logo-small.jpg" width="10%" />
@@ -135,6 +136,7 @@ I'm currently running this tutorial with **Python 3** on **Anaconda**
 The quickest and simplest way to setup the environment is to use [conda](https://store.continuum.io) environment manager. 
 
 We provide in the materials a `deep-learning.yml` that is complete and **ready to use** to set up your virtual environment with conda.
+
 
 
 ```python
