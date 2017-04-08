@@ -1,14 +1,8 @@
-
 <div>
-    <h1 style="text-align: center;">Deep Learning with Keras</h1>
-    <img style="text-align: left" src="imgs/keras-logo-small.jpg" width="10%" />
+    <h1 style="text-align: center;">Deep Learning with Keras and TFlow</h1>
+    <img style="text-align: left" src="https://blog.keras.io/img/keras-tensorflow-logo.jpg" width="15%" />
 <div>
-
-<div>
-    <h2 style="text-align: center;">Tutorial @ EuroScipy 2016</h2>
-    <img style="text-align: left" src="imgs/euroscipy_2016_logo.png" width="40%" />
-</div>    
-
+<br>
 ##### Yam Peleg,  Valerio Maggio
 
 # Goal of this Tutorial
@@ -18,78 +12,9 @@
 - **Understand** how easy is to do basic and *advanced* DL models in Keras;
     - **Examples and Hand-on Excerises** along the way.
 
-## Source
-
-https://github.com/leriomaggio/deep-learning-keras-euroscipy2016/
 
 ---
-
-# (Tentative) Schedule 
-
-## Attention: Spoilers Warning!
-
-
-- **Setup** (`10 mins`)
-
-- **Part I**: **Introduction** (`~65 mins`)
-
-    - Intro to ANN (`~20 mins`)
-        - naive pure-Python implementation
-        - fast forward, sgd, backprop
-        
-    - Intro to Theano (`15 mins`)
-        - Model + SGD with Theano
-        
-    - Introduction to Keras (`30 mins`)
-        - Overview and main features
-            - Theano backend
-            - Tensorflow backend
-        - Multi-Layer Perceptron and Fully Connected
-            - Examples with `keras.models.Sequential` and `Dense`
-            - HandsOn: MLP with keras
-            
-- **Coffe Break** (`30 mins`)
-
-- **Part II**: **Supervised Learning and Convolutional Neural Nets** (`~45 mins`)
-    
-    - Intro: Focus on Image Classification (`5 mins`)
-
-    - Intro to CNN (`25 mins`)
-        - meaning of convolutional filters
-            - examples from ImageNet    
-        - Meaning of dimensions of Conv filters (through an exmple of ConvNet) 
-        - Visualising ConvNets
-        - HandsOn: ConvNet with keras 
-
-    - Advanced CNN (`10 mins`)
-        - Dropout
-        - MaxPooling
-        - Batch Normalisation
-        
-    - Famous Models in Keras (likely moved somewhere else) (`10 mins`)
-        (ref: https://github.com/fchollet/deep-learning-models)
-            - VGG16
-            - VGG19
-            - ResNet50
-            - Inception v3
-        - HandsOn: Fine tuning a network on new dataset 
-        
-- **Part III**: **Unsupervised Learning** (`10 mins`)
-
-    - AutoEncoders (`5 mins`)
-    - word2vec & doc2vec (gensim) & `keras.datasets` (`5 mins`)
-        - `Embedding`
-        - word2vec and CNN
-    - Exercises
-
-- **Part IV**: **Advanced Materials** (`20 mins`)
-    - RNN and LSTM (`10 mins`)
-        -  RNN, LSTM, GRU  
-    - Example of RNN and LSTM with Text (`~10 mins`) -- *Tentative*
-    - HandsOn: IMDB
-
-- **Wrap up and Conclusions** (`5 mins`)
-
+### !!!PROGRAM WILL BE PUBLISHED HERE!!!
 ---
 
 # Requirements
@@ -132,9 +57,27 @@ I'm currently running this tutorial with **Python 3** on **Anaconda**
 
 # How to set up your environment
 
-The quickest and simplest way to setup the environment is to use [conda](https://store.continuum.io) environment manager. 
 
-We provide in the materials a `deep-learning.yml` that is complete and **ready to use** to set up your virtual environment with conda.
+The quickest and simplest way to setup the environment is to use [conda](https://store.continuum.io) environment manager. 
+Download Anaconda 4.2.0 (based on python 3.5) here:
++ Mac OSX 64Bit (https://repo.continuum.io/archive/Anaconda3-4.2.0-MacOSX-x86_64.sh)
++ Linux 64Bit (https://repo.continuum.io/archive/Anaconda2-4.2.0-Linux-x86_64.sh)
+
+If you need anaconda for different archs please refers to: https://repo.continuum.io/archive/index.html
+<br>
+To install anaconda: 
+```bash
+bash Anaconda3-4.2.0-MacOSX-x86_64.sh [mac users]
+bash Anaconda2-4.2.0-Linux-x86_64.sh [linux users]
+```
+
+<br>
+#### For Windows Users
+**We never tested the env on windows machines**. If you want you can install Anaconda (https://repo.continuum.io/archive/Anaconda2-4.2.0-Windows-x86_64.exe) for windows and create your env manually (https://conda.io/docs/using/envs.html#create-an-environment).
+In ```envs/packages_list.txt``` you can find all the software you need to install within your virtual environment.
+
+<br>
+We provide in the materials a `envs/deep-learning-linux.yml` for linux users `envs/deep-learning-osx.yml` for mac users that is complete and **ready to use** to set up your virtual environment with conda.
 
 
 ```python
@@ -300,23 +243,25 @@ We provide in the materials a `deep-learning.yml` that is complete and **ready t
       - wcwidth==0.1.7
       - wheel==0.29.0
       - widgetsnbextension==1.2.6
-    prefix: /home/valerio/anaconda3/envs/deep-learning
-    
+
 
 
 # Recreate the Conda Environment
 
+#### Preface
+For first clone this repo ```git clone https://gitlab.fbk.eu/MPBA/deep-learning-keras-tensorflow.git``` and then enter into deep-learning-keras-tensorflow directory.
+
 #### A. Create the Environment
 
 ```
-conda env create -f deep-learning.yml  # this file is for Linux channels.
+conda env create -f envs/deep-learning-linux.yml  # this file is for Linux channels.
 ```
 
 If you're using a **Mac OSX**, we also provided in the repo the conda file 
 that is compatible with `osx-channels`:
 
 ```
-conda env create -f deep-learning-osx.yml  # this file is for OSX channels.
+conda env create -f envs/deep-learning-osx.yml  # this file is for OSX channels.
 ```
 
 #### B. Activate the new `deep-learning` Environment
@@ -365,14 +310,30 @@ cnmem=.90
 
 ### 3. Installing Tensorflow as backend 
 
+For Linux Users<br>
+`!!!SELECT THE whl FILE ACCORDING TO YOUR HARDWARE!!!`
 ```shell
 # Ubuntu/Linux 64-bit, GPU enabled, Python 3.5
 # Requires CUDA toolkit 7.5 and CuDNN v4. For other versions, see "Install from sources" below.
 export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.10.0rc0-cp35-cp35m-linux_x86_64.whl
 
+# Ubuntu/Linux 64-bit, CPU only, Python 3.5
+export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.10.0-cp34-cp34m-linux_x86_64.whl
+
 pip install --ignore-installed --upgrade $TF_BINARY_URL
 ```
 
+For Mac OSX Users<br>
+`!!!SELECT THE whl FILE ACCORDING TO YOUR HARDWARE!!!`
+```shell
+# Mac OS X, CPU only, Python 3.4 or 3.5:
+export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.10.0-py3-none-any.whl
+
+# Mac OS X, GPU enabled, Python 3.4 or 3.5:
+export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/gpu/tensorflow-0.10.0-py3-none-any.whl
+
+pip install --ignore-installed --upgrade $TF_BINARY_URL
+```
 **More on [tensorflow documentation](https://www.tensorflow.org/versions/r0.10/get_started/os_setup.html)**
 
 ---
