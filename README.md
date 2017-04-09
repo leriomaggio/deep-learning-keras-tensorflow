@@ -3,6 +3,7 @@
     <img style="text-align: left" src="https://blog.keras.io/img/keras-tensorflow-logo.jpg" width="15%" />
 <div>
 <br>
+
 ##### Yam Peleg,  Valerio Maggio
 
 # Goal of this Tutorial
@@ -297,7 +298,8 @@ touch $HOME/.theanorc
 ```
 [global]
 floatX = float32
-device = gpu  # switch to cpu if no GPU is available on your machine
+# switch following to cpu if no GPU is available on your machine
+device = gpu
 
 [nvcc]
 fastmath = True
