@@ -15,21 +15,21 @@
         <tr style="border: 0px;">
             <td style="border: 0px;">
                 <img src="imgs/twitter_small.png" style="display: inline-block;" /> 
-                [@leriomaggio](http://twitter.com/leriomaggio)
+                <a href="http://twitter.com/leriomaggio" target="_blank">@leriomaggio</a>
             </td>
             <td style="border: 0px;">
                 <img src="imgs/gplus_small.png" style="display: inline-block;" /> 
-                [+ValerioMaggio](http://plus.google.com/+ValerioMaggio)
+                <a href="http://plus.google.com/+ValerioMaggio" target="_blank">+ValerioMaggio</a>
             </td>
         </tr>
         <tr style="border: 0px;">
             <td style="border: 0px;">
                 <img src="imgs/linkedin_small.png" style="display: inline-block;" /> 
-                [it.linkedin.com/in/valeriomaggio]()
+                <a href="it.linkedin.com/in/valeriomaggio" target="_blank">valeriomaggio</a>
             </td>
             <td style="border: 0px;">
                 <img src="imgs/gmail_small.png" style="display: inline-block;" /> 
-                [vmaggio@fbk.eu]()
+                <a href="mailto:vmaggio@fbk.eu">vmaggio_at_fbk_dot_eu</a>
             </td>
        </tr>
   </tbody>
