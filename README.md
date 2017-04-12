@@ -38,20 +38,16 @@
 
 ```shell
 
-git clone -b pydatait 
-https://github.com/leriomaggio/deep-learning-keras-tensorflow.git
+git clone https://github.com/leriomaggio/deep-learning-keras-tensorflow.git
 ```
 
 ---
 
-# Outline at a glance
-
-- **Warmup**
-
 - **Part I**: **Introduction**
 
-    - Intro to ANN
-        - naive pure-Python implementation
+    - Intro to Deep Learning and ANN
+        - Perceptron and MLP    
+	- naive pure-Python implementation
         - fast forward, sgd, backprop
         
     - Intro to Tensorflow 
@@ -59,21 +55,12 @@ https://github.com/leriomaggio/deep-learning-keras-tensorflow.git
             
     - Introduction to Keras
         - Overview and main features
-            - Tensorflow backend
-            - Theano backend
             - Keras Backend
-            - Overview of the main layers
+            - Overview of the `core` layers
         - Multi-Layer Perceptron and Fully Connected
             - Examples with `keras.models.Sequential` and `Dense`
             - HandsOn: FC with keras
     
-    - Extra Material:
-        - Intro to Theano
-        - Alternative ANN implementation for MNIST
-    
-            
-- **Break**
-
 - **Part II**: **Supervised Learning and Convolutional Neural Nets**
     
     - Intro: Focus on Image Classification
@@ -81,38 +68,42 @@ https://github.com/leriomaggio/deep-learning-keras-tensorflow.git
     - Intro to ConvNets
         - meaning of convolutional filters
             - examples from ImageNet    
-        - Meaning of dimensions of Conv filters (through an exmple of ConvNet) 
-        - Visualising ConvNets
-        - HandsOn: ConvNet with keras 
+        - Visualising ConvNets 
 
     - Advanced CNN
         - Dropout
         - MaxPooling
         - Batch Normalisation
+		
+    - HandsOn: MNIST Dataset
+        - FC and MNIST
+        - CNN and MNIST
         
-    - Famous Models in Keras
-        (ref: `keras.applications`)
-            - VGG16
-            - VGG19
-            - ResNet50
-            - Inception v3
-        - Transfer Learning
-        - HandsOn: Fine tuning a network on new dataset 
+    - Deep Convolutiona Neural Networks with Keras (ref: `keras.applications`)
+        - VGG16
+        - VGG19
+        - ResNet50
+    - Transfer Learning and FineTuning
+    - Hyperparameters Optimisation 
         
 - **Part III**: **Unsupervised Learning**
 
-    - AutoEncoders (`5 mins`)
-    - word2vec & doc2vec (gensim) & `keras.datasets`
-        - `Embedding`
+    - AutoEncoders and Embeddings
+	- AutoEncoders and MNIST
+    	- word2vec and doc2vec (gensim) with `keras.datasets`
         - word2vec and CNN
-    - Exercises
-
-- **Part IV**: **Advanced Materials**
-    - RNN and LSTM (`10 mins`)
-        -  RNN, LSTM, GRU  
-    - Example of RNN and LSTM with Text
-    - HandsOn: IMDB
-    - **Multi-Input/Multi-Output Network Topologies**
+    
+- **Part IV**: **Recurrent Neural Networks**
+    - Recurrent Neural Network in Keras 
+        -  `SimpleRNN`, `LSTM`, `GRU`
+		
+- **PartV**: **Additional Materials**:  
+   - Quick tutorial on `theano`
+   - Perceptron and Adaline (pure-python) implementations 
+   - MLP and MNIST (pure-python)
+   - LSTM for Sentence Generation
+   - Custom Layers in Keras 
+   - Multi modal Network Topologies with Keras
 
 - **Wrap up and Conclusions**
 
