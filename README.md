@@ -157,8 +157,57 @@ I'm currently running this tutorial with **Python 3** on **Anaconda**
 
     Python 3.5.2
 
+---	
+	
+## Setting the Environment
+
+In this repository, files to re-create virtual env with `conda` are provided for Linux and OSX machines, namely 
+`deep-learning.yml`, `deep-learning-osx.yml`, respectively.
+
+To re-create the virtual environments (on Linux):
+
+```shell
+conda env create -f deep-learning.yml
+```
+
+On OSX machines, just change the filename, accordingly.
+
+### Installing Tensorflow
+
+To date `tensorflow` comes in two different packages, namely `tensorflow` and `tensorflow-gpu`, whether you want to install it with 
+CPU-only/GPU support, respectively.
+
+For this reason, `tensorflow` has **not** been included in the provided conda environment files and has to be installed separately.
+
+#### Tensorflow for CPU only:
+
+```shell
+pip install tensorflow
+```
+
+#### Tensorflow with GPU support:
+
+```shell
+pip install tensorflow-gpu
+```
+
+**Note**: NVIDIA Drivers and CuDNN **must** be installed and configured before hand. Please refer to official 
+[Tensorflow documentation](https://www.tensorflow.org/install/) for further details.
+
+
+#### Important Note:
+
+All the code provided** in this tutorial is able to run even if `tensorflow` is **not** installed, but using `theano` as the (default) backend!
+
+And **this** is exactly the power of Keras!
+
+Therefore, installing `tensorflow` is **not** stricly required!
+
+**: Apart from the __1.2 Introduction to Tensorflow__ tutorial, of course.
 
 ### Configure Keras with tensorflow
+
+By default, Keras is configured with `theano` as a backend. If you want to use `tensorflow` instead, these are the simple steps to follow:
 
 1) Create the `keras.json` (if it does not exist):
 
