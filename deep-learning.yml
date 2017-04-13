@@ -92,7 +92,6 @@ dependencies:
   - prompt-toolkit==1.0.14
   - protobuf==3.2.0
   - pyyaml==3.12
-  - tensorflow-gpu==1.0.1
   - theano==0.9.0
 prefix: /home/valerio/anaconda3/envs/deep-learning-pydatait-tutorial
 
