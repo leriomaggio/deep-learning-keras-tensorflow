@@ -264,7 +264,7 @@ import keras
     Using TensorFlow backend.
 
 
-## 2. Check installeded Versions
+## 2. Check installed Versions
 
 
 ```python
