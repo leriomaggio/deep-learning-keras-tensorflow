@@ -163,6 +163,43 @@ conda env create -f deep-learning.yml
 
 For OSX, just change the filename, accordingly.
 
+### Notes about Installing Theano with GPU support
+
+**NOTE**: Read this section **only** if after _pip installing_ `theano`, it raises error in enabling the GPU support!
+
+Since version `0.9` Theano introduced the [`libgpuarray`](http://deeplearning.net/software/libgpuarray) in the stable release (it was previously only available in the _development_ version).
+
+The goal of `libgpuarray` is (_from the documentation_) make a common GPU ndarray (n dimensions array) that can be reused by all projects that is as future proof as possible, while keeping it easy to use for simple need/quick test.
+
+Here are some useful tips (hopefully) I came up with to properly install and configure `theano` on (Ubuntu) Linux with **GPU** support:
+
+1) [If you're using Anaconda] `conda install theano pygpu` should be just fine!
+
+Sometimes it is suggested to install `pygpu` using the `conda-forge` channel:
+
+`conda install -c conda-forge pygpu`
+
+2) [Works with both Anaconda Python or Official CPython]
+
+* Install `libgpuarray` from source: [Step-by-step install libgpuarray user library](http://deeplearning.net/software/libgpuarray/installation.html#step-by-step-install-user-library)
+
+* Then, install `pygpu` from source: (in the same source folder)
+`python setup.py build && python setup.py install`
+
+* `pip install theano`.
+
+
+After **Theano is installed**:
+
+```
+echo "[global]
+device = cuda
+floatX = float32
+
+[lib]
+cnmem = 1.0" > ~/.theanorc
+```
+
 ### Installing Tensorflow
 
 To date `tensorflow` comes in two different packages, namely `tensorflow` and `tensorflow-gpu`, whether you want to install 
