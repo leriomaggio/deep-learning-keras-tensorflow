@@ -116,6 +116,9 @@ For OSX, just change the filename, accordingly.
 
 **NOTE**: Read this section **only** if after _pip installing_ `theano`, it raises error in enabling the GPU support!
 
+NVIDIA Drivers and CuDNN **must** be installed and configured before hand. Please refer to the official 
+[Theano documentation](http://deeplearning.net/software/theano/install.html) for further details.
+
 Since version `0.9` Theano introduced the [`libgpuarray`](http://deeplearning.net/software/libgpuarray) in the stable release (it was previously only available in the _development_ version).
 
 The goal of `libgpuarray` is (_from the documentation_) make a common GPU ndarray (n dimensions array) that can be reused by all projects that is as future proof as possible, while keeping it easy to use for simple need/quick test.
@@ -180,7 +183,7 @@ ___**This** is exactly the power of Keras!___
 
 Therefore, installing `tensorflow` is **not** stricly required!
 
-+: Apart from the **1.2 Introduction to Tensorflow** tutorial, of course.
++: Apart from the **Theano** and **Tensorflow** example that are very specific. Anyway you can skip executing those parts, of course.
 
 ### Configure Keras with tensorflow
 
