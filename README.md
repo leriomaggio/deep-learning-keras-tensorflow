@@ -43,69 +43,18 @@ git clone https://github.com/leriomaggio/deep-learning-keras-tensorflow.git
 
 ---
 
-- **Part I**: **Introduction**
+# Outline (in ten-ish notebooks)
 
-    - Intro to Deep Learning and ANN
-        - Perceptron and MLP    
-	- naive pure-Python implementation
-        - fast forward, sgd, backprop
-        
-    - Intro to Tensorflow 
-        - Model + SGD with Tensorflow
-            
-    - Introduction to Keras
-        - Overview and main features
-            - Keras Backend
-            - Overview of the `core` layers
-        - Multi-Layer Perceptron and Fully Connected
-            - Examples with `keras.models.Sequential` and `Dense`
-            - HandsOn: FC with keras
-    
-- **Part II**: **Supervised Learning and Convolutional Neural Nets**
-    
-    - Intro: Focus on Image Classification
-
-    - Intro to ConvNets
-        - meaning of convolutional filters
-            - examples from ImageNet    
-        - Visualising ConvNets 
-
-    - Advanced CNN
-        - Dropout
-        - MaxPooling
-        - Batch Normalisation
-		
-    - HandsOn: MNIST Dataset
-        - FC and MNIST
-        - CNN and MNIST
-        
-    - Deep Convolutiona Neural Networks with Keras (ref: `keras.applications`)
-        - VGG16
-        - VGG19
-        - ResNet50
-    - Transfer Learning and FineTuning
-    - Hyperparameters Optimisation 
-        
-- **Part III**: **Unsupervised Learning**
-
-    - AutoEncoders and Embeddings
-	- AutoEncoders and MNIST
-    	- word2vec and doc2vec (gensim) with `keras.datasets`
-        - word2vec and CNN
-    
-- **Part IV**: **Recurrent Neural Networks**
-    - Recurrent Neural Network in Keras 
-        -  `SimpleRNN`, `LSTM`, `GRU`
-		
-- **PartV**: **Additional Materials**:  
-   - Quick tutorial on `theano`
-   - Perceptron and Adaline (pure-python) implementations 
-   - MLP and MNIST (pure-python)
-   - LSTM for Sentence Generation
-   - Custom Layers in Keras 
-   - Multi modal Network Topologies with Keras
-
-- **Wrap up and Conclusions**
+1. _Multi-layer Fully Connected Networks (and the `backends`)_
+2. _Hidden Layers features and Embeddings_
+3. _Convolutional Networks_
+4. _Hyperparameter Tuning_
+5. _Cutsom Layers_
+6. _Deep CNN and Residual Networks_
+7. _Transfer Learning and Fine Tuning_
+8. _Recursive Neural Networks_
+9. _AutoEncoders_
+10. _Multi-Modal Networks_
 
 ---
 
@@ -162,6 +111,43 @@ conda env create -f deep-learning.yml
 ```
 
 For OSX, just change the filename, accordingly.
+
+### Notes about Installing Theano with GPU support
+
+**NOTE**: Read this section **only** if after _pip installing_ `theano`, it raises error in enabling the GPU support!
+
+Since version `0.9` Theano introduced the [`libgpuarray`](http://deeplearning.net/software/libgpuarray) in the stable release (it was previously only available in the _development_ version).
+
+The goal of `libgpuarray` is (_from the documentation_) make a common GPU ndarray (n dimensions array) that can be reused by all projects that is as future proof as possible, while keeping it easy to use for simple need/quick test.
+
+Here are some useful tips (hopefully) I came up with to properly install and configure `theano` on (Ubuntu) Linux with **GPU** support:
+
+1) [If you're using Anaconda] `conda install theano pygpu` should be just fine!
+
+Sometimes it is suggested to install `pygpu` using the `conda-forge` channel:
+
+`conda install -c conda-forge pygpu`
+
+2) [Works with both Anaconda Python or Official CPython]
+
+* Install `libgpuarray` from source: [Step-by-step install libgpuarray user library](http://deeplearning.net/software/libgpuarray/installation.html#step-by-step-install-user-library)
+
+* Then, install `pygpu` from source: (in the same source folder)
+`python setup.py build && python setup.py install`
+
+* `pip install theano`.
+
+
+After **Theano is installed**:
+
+```
+echo "[global]
+device = cuda
+floatX = float32
+
+[lib]
+cnmem = 1.0" > ~/.theanorc
+```
 
 ### Installing Tensorflow
 
