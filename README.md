@@ -1,8 +1,12 @@
 <div>
     <h1 style="text-align: center;">Deep Learning with Keras and Tensorflow</h1>
-    <img style="text-align: left" src="https://blog.keras.io/img/keras-tensorflow-logo.jpg" width="30%" />
-    <img style="text-align: left" src="imgs/conference_logo.png" width="30%" alt="Conference Logo" />
+</div>
 <div>
+    <img style="text-align: left" src="https://blog.keras.io/img/keras-tensorflow-logo.jpg" width="30%" />
+</div>
+<div>
+    <img style="text-align: left" src="imgs/conference_logo.png" width="30%" alt="Conference Logo" />
+</div>
 <br>
 
 # Author: Valerio Maggio
