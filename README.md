@@ -1,6 +1,7 @@
 <div>
     <h1 style="text-align: center;">Deep Learning with Keras and Tensorflow</h1>
-    <img style="text-align: left" src="https://blog.keras.io/img/keras-tensorflow-logo.jpg" width="15%" />
+    <img style="text-align: left" src="https://blog.keras.io/img/keras-tensorflow-logo.jpg" width="30%" />
+    <img style="text-align: left" src="imgs/conference_logo.png" width="30%" alt="Conference Logo" />
 <div>
 <br>
 
@@ -35,10 +36,13 @@
   </tbody>
 </table>
 
+## Get the Materials
 
-```shell
+<img src="imgs/github.jpg" />
 
-git clone https://github.com/leriomaggio/deep-learning-keras-tensorflow.git
+```
+
+git clone -b pydatalondon2017 https://github.com/leriomaggio/deep-learning-keras-tensorflow.git
 ```
 
 ---
