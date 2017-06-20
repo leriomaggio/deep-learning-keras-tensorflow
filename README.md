@@ -45,44 +45,45 @@ git clone https://github.com/leriomaggio/deep-learning-keras-tensorflow.git
 
 - **Part I**: **Introduction**
 
-    - Intro to Deep Learning and ANN
+    - Intro to Artificial Neural Networks
         - Perceptron and MLP    
-	- naive pure-Python implementation
+        - naive pure-Python implementation
         - fast forward, sgd, backprop
         
-    - Intro to Tensorflow 
-        - Model + SGD with Tensorflow
-            
-    - Introduction to Keras
-        - Overview and main features
-            - Keras Backend
+    - Introduction to Deep Learning Frameworks
+        - Intro to Theano
+        - Intro to Tensorflow
+        - Intro to Keras
+            - Overview and main features
             - Overview of the `core` layers
-        - Multi-Layer Perceptron and Fully Connected
-            - Examples with `keras.models.Sequential` and `Dense`
-            - HandsOn: FC with keras
+            - Multi-Layer Perceptron and Fully Connected
+                - Examples with `keras.models.Sequential` and `Dense`
+            - Keras Backend
     
-- **Part II**: **Supervised Learning and Convolutional Neural Nets**
+- **Part II**: **Supervised Learning **
     
-    - Intro: Focus on Image Classification
-
-    - Intro to ConvNets
+    - Fully Connected Networks and Embeddings
+        - Intro to MNIST Dataset
+        - Hidden Leayer Representation and Embeddings
+        
+    - Convolutional Neural Networks
         - meaning of convolutional filters
             - examples from ImageNet    
         - Visualising ConvNets 
 
-    - Advanced CNN
-        - Dropout
-        - MaxPooling
-        - Batch Normalisation
-		
-    - HandsOn: MNIST Dataset
-        - FC and MNIST
-        - CNN and MNIST
+        - Advanced CNN
+            - Dropout
+            - MaxPooling
+            - Batch Normalisation
+
+        - HandsOn: MNIST Dataset
+            - FC and MNIST
+            - CNN and MNIST
         
-    - Deep Convolutiona Neural Networks with Keras (ref: `keras.applications`)
-        - VGG16
-        - VGG19
-        - ResNet50
+        - Deep Convolutiona Neural Networks with Keras (ref: `keras.applications`)
+            - VGG16
+            - VGG19
+            - ResNet50
     - Transfer Learning and FineTuning
     - Hyperparameters Optimisation 
         
@@ -96,16 +97,11 @@ git clone https://github.com/leriomaggio/deep-learning-keras-tensorflow.git
 - **Part IV**: **Recurrent Neural Networks**
     - Recurrent Neural Network in Keras 
         -  `SimpleRNN`, `LSTM`, `GRU`
+    - LSTM for Sentence Generation
 		
 - **PartV**: **Additional Materials**:  
-   - Quick tutorial on `theano`
-   - Perceptron and Adaline (pure-python) implementations 
-   - MLP and MNIST (pure-python)
-   - LSTM for Sentence Generation
    - Custom Layers in Keras 
    - Multi modal Network Topologies with Keras
-
-- **Wrap up and Conclusions**
 
 ---
 
