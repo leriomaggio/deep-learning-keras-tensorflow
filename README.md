@@ -39,6 +39,7 @@
 ```shell
 
 git clone https://github.com/leriomaggio/deep-learning-keras-tensorflow.git
+git checkout tags/webvalley-2017
 ```
 
 ---
@@ -328,9 +329,9 @@ import tensorflow as tf
 print('Tensorflow: ', tf.__version__)
 ```
 
-    keras:  2.0.2
+    keras:  2.0.4
     Theano:  0.9.0
-    Tensorflow:  1.0.1
+    Tensorflow:  1.2.1
 
 
 <br>
