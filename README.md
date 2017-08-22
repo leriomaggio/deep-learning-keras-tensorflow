@@ -62,7 +62,7 @@ git checkout tags/webvalley-2017
                 - Examples with `keras.models.Sequential` and `Dense`
             - Keras Backend
     
-- **Part II**: **Supervised Learning **
+- **Part II**: **Supervised Learning**
     
     - Fully Connected Networks and Embeddings
         - Intro to MNIST Dataset
