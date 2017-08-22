@@ -45,7 +45,8 @@
 
 ```
 
-git clone -b pydatalondon2017 https://github.com/leriomaggio/deep-learning-keras-tensorflow.git
+git clone https://github.com/leriomaggio/deep-learning-keras-tensorflow.git
+git checkout tags/pydata-london2017
 ```
 
 ---
