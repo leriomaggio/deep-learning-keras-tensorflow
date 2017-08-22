@@ -44,7 +44,7 @@
 ```shell
 
 git clone https://github.com/leriomaggio/deep-learning-keras-tensorflow.git
-git checkout tags/pydata-florence2016
+git checkout tags/pydata-florence2017
 ```
 
 ---
