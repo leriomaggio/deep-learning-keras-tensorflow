@@ -9,7 +9,7 @@ dependencies:
 - jupyter=1.0*
 - matplotlib=2.0*
 - notebook=5.0*
-- numpy=1.13*
+- numpy=1.12*
 - pandas=0.20*
 - lxml
 - pillow
