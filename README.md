@@ -50,7 +50,7 @@ git checkout tags/euroscipy2017
 5. _Cutsom Layers_
 6. _Deep CNN and Residual Networks_
 7. _Transfer Learning and Fine Tuning_
-8. _Recursive Neural Networks_
+8. _Recurrent Neural Networks_
 9. _AutoEncoders_
 10. _Multi-Modal Networks_
 
