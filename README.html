@@ -1,0 +1,257 @@
+<style>.hll { background-color: #ffffcc }
+.c { color: #888888 } /* Comment */
+.err { color: #FF0000; background-color: #FFAAAA } /* Error */
+.k { color: #008800; font-weight: bold } /* Keyword */
+.o { color: #333333 } /* Operator */
+.ch { color: #888888 } /* Comment.Hashbang */
+.cm { color: #888888 } /* Comment.Multiline */
+.cp { color: #557799 } /* Comment.Preproc */
+.cpf { color: #888888 } /* Comment.PreprocFile */
+.c1 { color: #888888 } /* Comment.Single */
+.cs { color: #cc0000; font-weight: bold } /* Comment.Special */
+.gd { color: #A00000 } /* Generic.Deleted */
+.ge { font-style: italic } /* Generic.Emph */
+.gr { color: #FF0000 } /* Generic.Error */
+.gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.gi { color: #00A000 } /* Generic.Inserted */
+.go { color: #888888 } /* Generic.Output */
+.gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.gs { font-weight: bold } /* Generic.Strong */
+.gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.gt { color: #0044DD } /* Generic.Traceback */
+.kc { color: #008800; font-weight: bold } /* Keyword.Constant */
+.kd { color: #008800; font-weight: bold } /* Keyword.Declaration */
+.kn { color: #008800; font-weight: bold } /* Keyword.Namespace */
+.kp { color: #003388; font-weight: bold } /* Keyword.Pseudo */
+.kr { color: #008800; font-weight: bold } /* Keyword.Reserved */
+.kt { color: #333399; font-weight: bold } /* Keyword.Type */
+.m { color: #6600EE; font-weight: bold } /* Literal.Number */
+.s { background-color: #fff0f0 } /* Literal.String */
+.na { color: #0000CC } /* Name.Attribute */
+.nb { color: #007020 } /* Name.Builtin */
+.nc { color: #BB0066; font-weight: bold } /* Name.Class */
+.no { color: #003366; font-weight: bold } /* Name.Constant */
+.nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.ni { color: #880000; font-weight: bold } /* Name.Entity */
+.ne { color: #FF0000; font-weight: bold } /* Name.Exception */
+.nf { color: #0066BB; font-weight: bold } /* Name.Function */
+.nl { color: #997700; font-weight: bold } /* Name.Label */
+.nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.nt { color: #007700 } /* Name.Tag */
+.nv { color: #996633 } /* Name.Variable */
+.ow { color: #000000; font-weight: bold } /* Operator.Word */
+.w { color: #bbbbbb } /* Text.Whitespace */
+.mb { color: #6600EE; font-weight: bold } /* Literal.Number.Bin */
+.mf { color: #6600EE; font-weight: bold } /* Literal.Number.Float */
+.mh { color: #005588; font-weight: bold } /* Literal.Number.Hex */
+.mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
+.mo { color: #4400EE; font-weight: bold } /* Literal.Number.Oct */
+.sa { background-color: #fff0f0 } /* Literal.String.Affix */
+.sb { background-color: #fff0f0 } /* Literal.String.Backtick */
+.sc { color: #0044DD } /* Literal.String.Char */
+.dl { background-color: #fff0f0 } /* Literal.String.Delimiter */
+.sd { color: #DD4422 } /* Literal.String.Doc */
+.s2 { background-color: #fff0f0 } /* Literal.String.Double */
+.se { color: #666666; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */
+.sh { background-color: #fff0f0 } /* Literal.String.Heredoc */
+.si { background-color: #eeeeee } /* Literal.String.Interpol */
+.sx { color: #DD2200; background-color: #fff0f0 } /* Literal.String.Other */
+.sr { color: #000000; background-color: #fff0ff } /* Literal.String.Regex */
+.s1 { background-color: #fff0f0 } /* Literal.String.Single */
+.ss { color: #AA6600 } /* Literal.String.Symbol */
+.bp { color: #007020 } /* Name.Builtin.Pseudo */
+.fm { color: #0066BB; font-weight: bold } /* Name.Function.Magic */
+.vc { color: #336699 } /* Name.Variable.Class */
+.vg { color: #dd7700; font-weight: bold } /* Name.Variable.Global */
+.vi { color: #3333BB } /* Name.Variable.Instance */
+.vm { color: #996633 } /* Name.Variable.Magic */
+.il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */</style>
+<p>Ten Steps to Keras<br>
+<br>
+    <br>
+<br>
+<br>
+    <br>
+</p>
+
+<h1 id="author-valerio-maggio">Author: Valerio Maggio</h1>
+
+<h3 id="postdoc-data-scientist-fbk-mpba"><em>PostDoc Data Scientist @ FBK/MPBA</em></h3>
+
+<h2 id="contacts">Contacts:</h2>
+
+<p>@leriomaggio<br>
+            <br>
+            <br>
+                 <br>
+                vmaggio_at_fbk_dot_eu<br>
+            <br>
+       <br>
+  </p>
+
+<h2 id="get-the-materials">Get the Materials</h2>
+
+<div class="highlight"><pre><span></span>git clone https://github.com/leriomaggio/deep-learning-keras-tensorflow.git
+git checkout tags/euroscipy2017
+</pre></div>
+<hr>
+
+<h1 id="outline-in-ten-ish-notebooks">Outline (in ten-ish notebooks)</h1>
+
+<ol>
+<li><em>Multi-layer Fully Connected Networks (and the <code>backends</code>)</em></li>
+<li><em>Hidden Layers features and Embeddings</em></li>
+<li><em>Convolutional Networks</em></li>
+<li><em>Hyperparameter Tuning</em></li>
+<li><em>Cutsom Layers</em></li>
+<li><em>Deep CNN and Residual Networks</em></li>
+<li><em>Transfer Learning and Fine Tuning</em></li>
+<li><em>Recursive Neural Networks</em></li>
+<li><em>AutoEncoders</em></li>
+<li><em>Multi-Modal Networks</em></li>
+</ol>
+
+<hr>
+
+<h1 id="requirements">Requirements</h1>
+
+<p>This tutorial requires the following packages:</p>
+
+<ul>
+<li><p>Python version 3.5</p>
+
+<ul>
+<li>Python 3.4 should be fine as well</li>
+<li>likely Python 2.7 would be also fine, but <em>who knows</em>? :P</li>
+</ul></li>
+<li><p><code>numpy</code> version &gt;= 1.12: <a href="http://www.numpy.org/">http://www.numpy.org/</a></p></li>
+<li><p><code>scipy</code> version &gt;= 0.19: <a href="http://www.scipy.org/">http://www.scipy.org/</a></p></li>
+<li><p><code>matplotlib</code> version &gt;= 2.0: <a href="http://matplotlib.org/">http://matplotlib.org/</a></p></li>
+<li><p><code>pandas</code> version &gt;= 0.19: <a href="http://pandas.pydata.org">http://pandas.pydata.org</a></p></li>
+<li><p><code>scikit-learn</code> version &gt;= 0.18: <a href="http://scikit-learn.org">http://scikit-learn.org</a></p></li>
+<li><p><code>keras</code> version &gt;= 2.0: <a href="http://keras.io">http://keras.io</a></p></li>
+<li><p><code>tensorflow</code> version 1.2: <a href="https://www.tensorflow.org">https://www.tensorflow.org</a></p></li>
+<li><p><code>ipython</code>/<code>jupyter</code> version &gt;= 6.0, with notebook support</p></li>
+</ul>
+
+<p>(Optional but recommended):</p>
+
+<ul>
+<li><code>hdf5</code> and <code>h5py</code> (required if you use model saving/loading functions in keras)</li>
+<li><strong>NVIDIA cuDNN</strong> if you have NVIDIA GPUs on your machines.
+<a href="">https://developer.nvidia.com/rdp/cudnn-download</a></li>
+</ul>
+
+<p>The easiest way to get (most) these is to use an all-in-one installer such as <a href="http://www.continuum.io/downloads">Anaconda</a> from Continuum. These are available for multiple architectures.</p>
+
+<hr>
+
+<h3 id="python-version">Python Version</h3>
+
+<p>I&rsquo;m currently running this tutorial with <strong>Python 3</strong> on <strong>Anaconda</strong></p>
+<div class="highlight"><pre><span></span><span class="err">!</span><span class="n">python</span> <span class="o">--</span><span class="n">version</span>
+</pre></div><div class="highlight"><pre><span></span>Python 3.5.4
+</pre></div>
+<hr>
+
+<h2 id="setting-the-environment">Setting the Environment</h2>
+
+<p>The repository provides a <code>keras-tutorial.yml</code> file to simply re-create the Anaconda Python Environment, using <code>conda</code> [1]. </p>
+
+<p>To re-create the virtual environments:</p>
+<div class="highlight"><pre><span></span>conda env create -f keras-tutorial.yml
+</pre></div>
+<p>A new <code>keras-tutorial</code> conda environment will be created.  To activate the environment: </p>
+<div class="highlight"><pre><span></span>source activate keras-tutorial
+</pre></div>
+<p>[1]: <em>Note</em>:  The conda environment creation  has been tested on both Linux and OSX platforms. Therefore, hopefully, it should also work on Windows !-)</p>
+
+<h2 id="notes-about-enabling-gpu-support-for-theano-and-tensorflow">Notes about Enabling GPU support for Theano and TensorFlow</h2>
+
+<h4 id="prerequisites">Prerequisites:</h4>
+
+<p>To enable GPU support for <code>theano</code> and <code>tensorflow</code>, it is mandatorily required that NVIDIA Drivers and CuDNN are <strong>already</strong> installed and configured <br>
+before hand (having GPU cards physically installed in your hardware configuration is assumed and took for granted!). </p>
+
+<p>Please refer to the official  <a href="https://developer.nvidia.com/cudnn">NVIDIA cuDNN</a> documentation for further details.</p>
+
+<h4 id="theano-configuration">Theano Configuration</h4>
+
+<h5 id="preamble">Preamble</h5>
+
+<ul>
+<li><code>theano</code> package is assumed to be already installed, as it is provided inside the Anaconda Virtual Environment.</li>
+<li>To date, Theano only supports <code>cuDNN 5.1</code>. No support for <code>cuDNN 6</code> or <code>7</code> is still available. Therefore, be sure to download and install the proper version.</li>
+</ul>
+
+<h5 id="configuring-theano">Configuring Theano</h5>
+<div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;[global]</span>
+<span class="s2">device = cuda0</span>
+<span class="s2">floatX = float32</span>
+
+<span class="s2">[lib]</span>
+<span class="s2">cnmem = 1.0&quot;</span> &gt; ~/.theanorc
+</pre></div>
+<h4 id="tensorflow-configuration">TensorFlow Configuration</h4>
+
+<p>To date, <code>tensorflow</code> is available in two different packages, namely <code>tensorflow</code> and <code>tensorflow-gpu</code>, whether you want to install <br>
+the framework with CPU-only or GPU support, respectively.</p>
+
+<p>For this reason,  if you want to enable GPU support for <code>tensorflow</code>, please be sure that the <code>keras-tutorial.yml</code> file has been properly <strong>modified</strong> to <br>
+include <code>tensorflow-gpu==1.2.1</code> package (instead of the default <code>tensorflow==1.2.1</code>).</p>
+
+<h3 id="configure-keras-with-tensorflow">Configure Keras with TensorFlow</h3>
+
+<p>By default, Keras is configured with <code>theano</code> as backend. </p>
+
+<p>If you want to use <code>tensorflow</code> instead, these are the simple steps to follow:</p>
+
+<p>1) Create the <code>keras.json</code> (if it does not exist):</p>
+<div class="highlight"><pre><span></span>touch <span class="nv">$HOME</span>/.keras/keras.json
+</pre></div>
+<p>2) Copy the following content into the file:</p>
+<div class="highlight"><pre><span></span>{
+    &quot;epsilon&quot;: 1e-07,
+    &quot;backend&quot;: &quot;tensorflow&quot;,
+    &quot;floatx&quot;: &quot;float32&quot;,
+    &quot;image_data_format&quot;: &quot;channels_last&quot;
+}
+</pre></div>
+<p>3) Verify it is properly configured:</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">keras</span>
+<span class="n">Using</span> <span class="n">TensorFlow</span> <span class="n">backend</span><span class="o">.</span>
+</pre></div>
+<h1 id="test-if-everything-is-uprunning">Test if everything is up&amp;running</h1>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;numpy:&#39;</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">scipy</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;scipy:&#39;</span><span class="p">,</span> <span class="n">scipy</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;matplotlib:&#39;</span><span class="p">,</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">IPython</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;iPython:&#39;</span><span class="p">,</span> <span class="n">IPython</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">sklearn</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;scikit-learn:&#39;</span><span class="p">,</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+</pre></div><div class="highlight"><pre><span></span>numpy: 1.12.1
+scipy: 0.19.1
+matplotlib: 2.0.2
+iPython: 6.1.0
+scikit-learn: 0.19.0
+</pre></div><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">keras</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;keras: &#39;</span><span class="p">,</span> <span class="n">keras</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+
+<span class="c1"># optional</span>
+<span class="kn">import</span> <span class="nn">theano</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Theano: &#39;</span><span class="p">,</span> <span class="n">theano</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="kn">as</span> <span class="nn">tf</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;TensorFlow: &#39;</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+</pre></div><div class="highlight"><pre><span></span>keras:  2.0.8
+Theano:  0.9.0
+TensorFlow:  1.2.1
+</pre></div>
+<p>If everything worked till down here, you&rsquo;re ready to start!</p>
