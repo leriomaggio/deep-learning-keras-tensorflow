@@ -4,6 +4,12 @@
 <div>
 <br>
 
+<img src="http://forge.fiware.org/plugins/mediawiki/wiki/fiware/images/thumb/4/46/FBK-Logo.png/707px-FBK-Logo.png"
+    width="15%" title="Fondazione Bruno Kessler" alt="FBK Logo" />
+
+<img src="https://mpba.fbk.eu/sites/mpba.fbk.eu/themes/fbkunit/logo-en.png" title="MPBA"
+     width="30%" alt="MPBA Logo" />
+
 # Author: Valerio Maggio
 
 ### _PostDoc Data Scientist @ FBK/MPBA_
@@ -14,21 +20,17 @@
     <tbody>
         <tr style="border: 0px;">
             <td style="border: 0px;">
-                <img src="imgs/twitter_small.png" style="display: inline-block;" /> 
+                <img src="imgs/twitter_small.png" style="display: inline-block;" />
                 <a href="http://twitter.com/leriomaggio" target="_blank">@leriomaggio</a>
-            </td>
-            <td style="border: 0px;">
-                <img src="imgs/gplus_small.png" style="display: inline-block;" /> 
-                <a href="http://plus.google.com/+ValerioMaggio" target="_blank">+ValerioMaggio</a>
             </td>
         </tr>
         <tr style="border: 0px;">
             <td style="border: 0px;">
-                <img src="imgs/linkedin_small.png" style="display: inline-block;" /> 
+                <img src="imgs/linkedin_small.png" style="display: inline-block;" />
                 <a href="it.linkedin.com/in/valeriomaggio" target="_blank">valeriomaggio</a>
             </td>
             <td style="border: 0px;">
-                <img src="imgs/gmail_small.png" style="display: inline-block;" /> 
+                <img src="imgs/gmail_small.png" style="display: inline-block;" />
                 <a href="mailto:vmaggio@fbk.eu">vmaggio_at_fbk_dot_eu</a>
             </td>
        </tr>
@@ -38,70 +40,28 @@
 
 ```shell
 
-git clone https://github.com/leriomaggio/deep-learning-keras-tensorflow.git
+git clone https://github.com/leriomaggio/deep-learning-keras-tensorflow.git -b fbk
 ```
 
 ---
 
-- **Part I**: **Introduction**
+# Outline at a glance
 
-    - Intro to Artificial Neural Networks
-        - Perceptron and MLP    
-        - naive pure-Python implementation
-        - fast forward, sgd, backprop
-        
-    - Introduction to Deep Learning Frameworks
-        - Intro to Theano
-        - Intro to Tensorflow
-        - Intro to Keras
-            - Overview and main features
-            - Overview of the `core` layers
-            - Multi-Layer Perceptron and Fully Connected
-                - Examples with `keras.models.Sequential` and `Dense`
-            - Keras Backend
-    
-- **Part II**: **Supervised Learning **
-    
-    - Fully Connected Networks and Embeddings
-        - Intro to MNIST Dataset
-        - Hidden Leayer Representation and Embeddings
-        
-    - Convolutional Neural Networks
-        - meaning of convolutional filters
-            - examples from ImageNet    
-        - Visualising ConvNets 
+- **Part I**: **Artificial Neural Networks and Frameworks**
 
-        - Advanced CNN
-            - Dropout
-            - MaxPooling
-            - Batch Normalisation
+- **Part II**: **Supervised Learning**
 
-        - HandsOn: MNIST Dataset
-            - FC and MNIST
-            - CNN and MNIST
-        
-        - Deep Convolutiona Neural Networks with Keras (ref: `keras.applications`)
-            - VGG16
-            - VGG19
-            - ResNet50
-    - Transfer Learning and FineTuning
-    - Hyperparameters Optimisation 
-        
 - **Part III**: **Unsupervised Learning**
 
-    - AutoEncoders and Embeddings
-	- AutoEncoders and MNIST
-    	- word2vec and doc2vec (gensim) with `keras.datasets`
-        - word2vec and CNN
-    
 - **Part IV**: **Recurrent Neural Networks**
-    - Recurrent Neural Network in Keras 
-        -  `SimpleRNN`, `LSTM`, `GRU`
-    - LSTM for Sentence Generation
-		
-- **PartV**: **Additional Materials**:  
-   - Custom Layers in Keras 
+
+- **Part V**: **Generative Adversarial Networks**
+
+- **Part VI**: **Extra**:  
+   - Custom Layers in Keras
    - Multi modal Network Topologies with Keras
+   - Multi-GPU Models
+   - Distributed Training
 
 ---
 
@@ -109,27 +69,29 @@ git clone https://github.com/leriomaggio/deep-learning-keras-tensorflow.git
 
 This tutorial requires the following packages:
 
-- Python version 3.5
-    - Python 3.4 should be fine as well
+- Python version 3.6
+    - Python 3.4+ should be fine as well
     - likely Python 2.7 would be also fine, but *who knows*? :P
-    
-- `numpy` version 1.10 or later: http://www.numpy.org/
-- `scipy` version 0.16 or later: http://www.scipy.org/
-- `matplotlib` version 1.4 or later: http://matplotlib.org/
-- `pandas` version 0.16 or later: http://pandas.pydata.org
-- `scikit-learn` version 0.15 or later: http://scikit-learn.org
-- `keras` version 2.0 or later: http://keras.io
-- `tensorflow` version 1.0 or later: https://www.tensorflow.org
-- `ipython`/`jupyter` version 4.0 or later, with notebook support
+- `numpy`: http://www.numpy.org/
+- `scipy`: http://www.scipy.org/
+- `matplotlib`: http://matplotlib.org/
+- `pandas`: http://pandas.pydata.org
+- `scikit-learn` : http://scikit-learn.org
+- `keras`: http://keras.io
+- `tensorflow`: https://www.tensorflow.org
+- `jupyter` & `notebook`: http://jupyter.org
 
 (Optional but recommended):
 
 - `pyyaml`
-- `hdf5` and `h5py` (required if you use model saving/loading functions in keras)
+- `hdf5` and `h5py` (required if you use model saving/loading
+    functions in keras)
 - **NVIDIA cuDNN** if you have NVIDIA GPUs on your machines.
     [https://developer.nvidia.com/rdp/cudnn-download]()
 
-The easiest way to get (most) these is to use an all-in-one installer such as [Anaconda](http://www.continuum.io/downloads) from Continuum. These are available for multiple architectures.
+The easiest way to get (most of) these is to use an all-in-one installer
+such as [Anaconda](https://www.anaconda.com/download/) from Continuum,
+which is available for multiple computer platforms.
 
 ---
 
@@ -142,100 +104,107 @@ I'm currently running this tutorial with **Python 3** on **Anaconda**
 !python --version
 ```
 
-    Python 3.5.2
+    Python 3.6.6
 
----	
-	
-## Setting the Environment
+---
 
-In this repository, files to re-create virtual env with `conda` are provided for Linux and OSX systems, 
-namely `deep-learning.yml` and `deep-learning-osx.yml`, respectively.
+# Setting the Environment
 
-To re-create the virtual environments (on Linux, for example):
+In this repository, files to install the required packages are provided.
+The first step to setup the environment is to create a
+Python [Virtual Environment](https://docs.python.org/3.6/tutorial/venv.html).
+
+Whether you are using [Anaconda](https://www.anaconda.com/download/)
+Python Distribution or the Standard
+Python framework (from [python.org](https://www.python.org/downloads/)),
+reported below are the instructions for the two cases, respectively.
+
+## (a) Conda Environment
+
+The repository includes a `conda-environment.yml` file that is necessary
+to re-create the Conda environment required for the tutorial.
+
+To re-create the virtual environments:
 
 ```shell
-conda env create -f deep-learning.yml
+$ conda env create -f conda-environment.yml
 ```
 
-For OSX, just change the filename, accordingly.
+## (b) `pyenv` & `virtualenv`
 
-### Notes about Installing Theano with GPU support
+### 1. Installing `pyenv`
 
-**NOTE**: Read this section **only** if after _pip installing_ `theano`, it raises error in enabling the GPU support!
+`pyenv` is a new package that lets you easily switch between multiple
+versions of Python.
+It's simple, unobtrusive, and follows the UNIX tradition of single-purpose
+tools that do one thing well.
 
-Since version `0.9` Theano introduced the [`libgpuarray`](http://deeplearning.net/software/libgpuarray) in the stable release (it was previously only available in the _development_ version).
+To **setup** `pyenv`, please follow the instructions available on
+project [GitHub Repository](https://github.com/pyenv/pyenv)
+depending on the specific platform and operating system.
 
-The goal of `libgpuarray` is (_from the documentation_) make a common GPU ndarray (n dimensions array) that can be reused by all projects that is as future proof as possible, while keeping it easy to use for simple need/quick test.
+There is a `pyenv` plugin named `pyenv-virtualenv` which comes with various
+features to help `pyenv` users to manage virtual environments created by
+`virtualenv` or Anaconda.
 
-Here are some useful tips (hopefully) I came up with to properly install and configure `theano` on (Ubuntu) Linux with **GPU** support:
+### 2. Installing `pyenv-virtualenv`
 
-1) [If you're using Anaconda] `conda install theano pygpu` should be just fine!
+I'd recommend to install `pyenv-virtualenv` as reported in
+the official [GitHub Repository](https://github.com/pyenv/pyenv-virtualenv).
 
-Sometimes it is suggested to install `pygpu` using the `conda-forge` channel:
+### 3. Setting up the virtual environment
 
-`conda install -c conda-forge pygpu`
+Once `pyenv` and `pyenv-virtualenv` have been correctly installed and
+configured, these are the necessary set of instructions to execute to
+set up the virtual environment for this tutorial:
 
-2) [Works with both Anaconda Python or Official CPython]
+```shell
 
-* Install `libgpuarray` from source: [Step-by-step install libgpuarray user library](http://deeplearning.net/software/libgpuarray/installation.html#step-by-step-install-user-library)
-
-* Then, install `pygpu` from source: (in the same source folder)
-`python setup.py build && python setup.py install`
-
-* `pip install theano`.
-
-
-After **Theano is installed**:
+$ pyenv install 3.6.6
+$ pyenv virtualenv 3.6.6 dl-keras-tf
+$ pyenv activate dl-keras-tf
+$ pip install -r requirements.txt
 
 ```
-echo "[global]
-device = cuda
-floatX = float32
 
-[lib]
-cnmem = 1.0" > ~/.theanorc
-```
+### Note on installing TensorFlow
 
-### Installing Tensorflow
+To date `tensorflow` comes in two different packages, namely `tensorflow`
+and `tensorflow-gpu`, whether you want to install
+the framework with CPU-only or CPU/GPU support, respectively.
 
-To date `tensorflow` comes in two different packages, namely `tensorflow` and `tensorflow-gpu`, whether you want to install 
-the framework with CPU-only or GPU support, respectively.
-
-For this reason, `tensorflow` has **not** been included in the conda envs and has to be installed separately.
+All the requirements files (namely `requirements.txt` and
+`conda-environment.yml`) consider the `tensorflow` package, and so
+with CPU-only support.
+If you want to enable GPU support, please consider to change the used
+requirements file, accordingly:
 
 #### Tensorflow for CPU only:
 
 ```shell
-pip install tensorflow
+tensorflow
 ```
 
 #### Tensorflow with GPU support:
 
 ```shell
-pip install tensorflow-gpu
+tensorflow-gpu
 ```
 
-**Note**: NVIDIA Drivers and CuDNN **must** be installed and configured before hand. Please refer to the official 
-[Tensorflow documentation](https://www.tensorflow.org/install/) for further details.
+**Note**: To effectively enable the GPU computing and support with
+TensorFlow, NVIDIA Drivers and CuDNN **must** be installed and configured
+before hand. Please refer to the official
+[Tensorflow documentation](https://www.tensorflow.org/install/)
+for further details.
 
+## Configure Keras with TensorFlow
 
-#### Important Note:
+In this tutorial, we are going to use **Keras** with **TensorFlow**
+backend.
 
-All the code provided+ in this tutorial can run even if `tensorflow` is **not** installed, and so using `theano` as the (default) backend!
+To do so, the following configuration steps are required:
 
-___**This** is exactly the power of Keras!___
-
-Therefore, installing `tensorflow` is **not** stricly required!
-
-+: Apart from the **1.2 Introduction to Tensorflow** tutorial, of course.
-
-### Configure Keras with tensorflow
-
-By default, Keras is configured with `theano` as backend. 
-
-If you want to use `tensorflow` instead, these are the simple steps to follow:
-
-1) Create the `keras.json` (if it does not exist):
+a) Create the `keras.json` (if it does not exist):
 
 ```shell
 touch $HOME/.keras/keras.json
@@ -308,29 +277,24 @@ import sklearn
 print('scikit-learn:', sklearn.__version__)
 ```
 
-    numpy: 1.11.1
-    scipy: 0.18.0
-    matplotlib: 1.5.2
-    iPython: 5.1.0
-    scikit-learn: 0.18
+    numpy: 1.15.2
+    scipy: 1.1.0
+    matplotlib: 3.0.0
+    iPython: 7.0.1
+    scikit-learn: 0.20.0
 
 
 
 ```python
 import keras
-print('keras: ', keras.__version__)
-
-# optional
-import theano
-print('Theano: ', theano.__version__)
+print('Keras: ', keras.__version__)
 
 import tensorflow as tf
 print('Tensorflow: ', tf.__version__)
 ```
 
-    keras:  2.0.2
-    Theano:  0.9.0
-    Tensorflow:  1.0.1
+    Keras:  2.2.3
+    Tensorflow:  1.11.0
 
 
 <br>
