@@ -299,3 +299,34 @@ print('Tensorflow: ', tf.__version__)
 
 <br>
 <h1 style="text-align: center;">If everything worked till down here, you're ready to start!</h1>
+
+## Accessing the materials
+
+All the materials in this tutorial will be provided as a collection of Jupyter Notebooks.
+
+If you already setup all the environment on your machine, all you need to do is to run the
+Jupyter notebook server:
+
+```shell
+
+$ jupyter notebook
+
+```
+
+Alternatively, I suggest you to try the new **Jupyter Lab** environment:
+
+```shell
+
+$ jupyter lab
+
+```
+
+### Binder
+
+(Consider this option only if your WiFi is stable)
+
+If you don't want the hassle of getting setup, you can use the Binder service to participate
+in the live tutorial.
+
+Just click on the button below:
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/leriomaggio/deep-learning-keras-tensorflow/fbk)
