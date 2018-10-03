@@ -6,4 +6,5 @@ numpy~=1.15.2
 pandas~=0.23.4
 scikit-learn~=0.20.0
 scipy~=1.1.0
-tensorflow~=1.11.0
+tensorflow>=1.10.0
+Pillow==5.3.0  # necessary to matplotlib to load png
