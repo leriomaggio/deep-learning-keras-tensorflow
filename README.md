@@ -197,6 +197,71 @@ before hand. Please refer to the official
 [Tensorflow documentation](https://www.tensorflow.org/install/)
 for further details.
 
+## (Optional) Installing Theano
+
+The installation of Theano framework is optional and only needed to run
+the introductory notebook(s) specifically using it.
+
+If you want to install `theano` you can:
+
+```shell
+
+$ pip install theano
+
+```
+
+or if you are using Anaconda Python - and so `conda`:
+
+```shell
+
+$ conda install theano
+
+```
+
+### Notes on Enabling GPU support with Theano
+
+**NOTE**: Read this section **only** if after _pip installing_ `theano`,
+it raises error in enabling the GPU support!
+
+Since version `0.9` Theano introduced the
+[`libgpuarray`](http://deeplearning.net/software/libgpuarray)
+in the stable release (it was previously only available in the _development_ version).
+
+The goal of `libgpuarray` is (_from the documentation_) make a common
+GPU `ndarray` (_n dimensions array_) that can be reused by all projects
+that is as future proof as possible, while keeping it easy to use for
+simple need/quick test.
+
+Here are some useful tips (hopefully) I came up with to properly install
+and configure `theano` on (Ubuntu) Linux with **GPU** support:
+
+1) [If you're using Anaconda] `conda install theano pygpu` should be just fine!
+
+Sometimes it is suggested to install `pygpu` using the `conda-forge` channel:
+
+`conda install -c conda-forge pygpu`
+
+2) [Works with both Anaconda Python or Official CPython]
+
+* Install `libgpuarray` from source: [Step-by-step install `libgpuarray` user [library](http://deeplearning.net/software/libgpuarray/installation.html#step-by-step-install-user-library)
+
+* Then, install `pygpu` from source: (in the same source folder)
+`python setup.py build && python setup.py install`
+
+* `pip install theano`.
+
+
+After **Theano is installed**:
+
+```
+echo "[global]
+device = cuda
+floatX = float32
+
+[lib]
+cnmem = 1.0" > ~/.theanorc
+```
+
 ## Configure Keras with TensorFlow
 
 In this tutorial, we are going to use **Keras** with **TensorFlow**
