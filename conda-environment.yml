@@ -12,3 +12,4 @@ dependencies:
   - pip:
     - keras==2.2.3
     - tensorflow==1.11*
+    - Pillow====5.3.*
