@@ -100,11 +100,13 @@ which is available for multiple computer platforms.
 I'm currently running this tutorial with **Python 3** on **Anaconda**
 
 
-```python
-!python --version
+```shell
+$ python --version
 ```
 
-    Python 3.6.6
+```
+Python 3.6.6
+```
 
 ---
 
@@ -243,7 +245,9 @@ Sometimes it is suggested to install `pygpu` using the `conda-forge` channel:
 
 2) [Works with both Anaconda Python or Official CPython]
 
-* Install `libgpuarray` from source: [Step-by-step install `libgpuarray` user [library](http://deeplearning.net/software/libgpuarray/installation.html#step-by-step-install-user-library)
+* Install `libgpuarray` from source: [Step-by-step install
+`libgpuarray`
+user library](http://deeplearning.net/software/libgpuarray/installation.html#step-by-step-install-user-library)
 
 * Then, install `pygpu` from source: (in the same source folder)
 `python setup.py build && python setup.py install`
@@ -288,16 +292,17 @@ touch $HOME/.keras/keras.json
 
 3) Verify it is properly configured:
 
-```python
+```
 !cat ~/.keras/keras.json
 ```
-
+```
     {
     	"epsilon": 1e-07,
     	"backend": "tensorflow",
     	"floatx": "float32",
     	"image_data_format": "channels_last"
     }
+```
 
 ---
 
