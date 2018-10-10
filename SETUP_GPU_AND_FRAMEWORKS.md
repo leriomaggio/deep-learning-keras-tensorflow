@@ -358,7 +358,7 @@ $ pip install cntk
 
 To install CNTK with GPU support:
 ```shell
-$ pip install cntk-gpus
+$ pip install cntk-gpu
 ```
 
 The complete list of wheels files installable via `pip` is
