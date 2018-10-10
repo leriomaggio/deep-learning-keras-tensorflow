@@ -126,7 +126,7 @@ here is a very nice reference:
 &rightarrow; [I Don't like Notebooks,](https://twitter.com/joelgrus/status/1033035196428378113)
 by _Joel Grus_ @ JupyterCon 2018.
 
-If you already have all the environment setup on your machine,
+If you **already have all the environment setup** on your machine,
 all you need to do is to run the Jupyter notebook server:
 
 ```shell
@@ -137,6 +137,14 @@ Alternatively, I suggest you to try the new **Jupyter Lab** environment:
 ```shell
 $ jupyter lab
 ```
+
+Otherwise, before running Jupyter server, it is mandatory to enable
+the (Python) virtual environment.
+
+Please refer to the section [Setting the Environment](#setup) for
+detailed instructions on how to install all the required
+packages and libraries.
+
 
 ## Binder
 
@@ -174,6 +182,7 @@ To start using Colaboratory, just click on the button below:
 
 ---
 
+<a name='setup'></a>
 # Setting the Environment
 
 In this repository, files to install the required packages are provided.
@@ -241,6 +250,19 @@ $ pyenv virtualenv 3.6.6 dl-keras-tf  # create virtual env using Py3.6
 $ pyenv activate dl-keras-tf  # activate the environment
 $ pip install -r requirements.txt  # install requirements
 
+```
+
+### Installing Jupyter Kernel (Optional)
+
+All the notebooks in this tutorial have been saved using a Jupyter Kernel
+defined on the created virtual environment, named "Python 3.6 (DL Keras TF)".
+
+In case you got a warning of _non-existent kernel_ when you open the
+notebooks on your machine, you need to create the corresponding
+`IPython` kernel:
+
+```shell
+$ python -m ipykernel install --user --name dl-keras-tf --display-name "Python 3.6 (DL Keras TF)"
 ```
 
 ### Configure Keras with TensorFlow
