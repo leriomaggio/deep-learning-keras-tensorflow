@@ -1,5 +1,12 @@
 # Reference: github.com/github/gitignore/
 
+# Temporary Directory
+tmp/
+
+# Keras model checpoint / weights files
+*.h5
+*.hdf5
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
