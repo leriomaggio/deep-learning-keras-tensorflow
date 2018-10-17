@@ -9,6 +9,7 @@ dependencies:
   - notebook=5.7*
   - pandas=0.23*
   - scikit-learn=0.20*
+  - certifi=2018*
   - pip:
     - keras>=2.2.4
     - tensorflow>=1.8
