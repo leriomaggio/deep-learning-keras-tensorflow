@@ -115,7 +115,7 @@ If you want to access the materials, you have several options:
 
 All the materials in this tutorial are provided as a collection of
 Jupyter Notebooks.
-if don't know **what is** a Jupyter notebook, here is a good
+if you don't know **what is** a Jupyter notebook, here is a good
 reference for a quick introduction:
 [Jupyter Notebook Beginner Guide](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html).
 
@@ -138,7 +138,7 @@ Alternatively, I suggest you to try the new **Jupyter Lab** environment:
 $ jupyter lab
 ```
 
-Otherwise, before running Jupyter server, it is mandatory to enable
+**NOTE**: Before running Jupyter server, it is mandatory to enable
 the (Python) virtual environment.
 
 Please refer to the section [Setting the Environment](#setup) for
