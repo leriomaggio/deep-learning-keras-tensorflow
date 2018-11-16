@@ -2,6 +2,7 @@
 
 # Temporary Directory
 tmp/
+.DS_Store
 
 # Keras model checpoint / weights files
 *.h5
