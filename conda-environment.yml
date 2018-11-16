@@ -14,3 +14,5 @@ dependencies:
     - keras>=2.2.4
     - tensorflow>=1.8
     - Pillow~=5.3
+    - networkx>=2.2
+    - tqdm~=4.28
