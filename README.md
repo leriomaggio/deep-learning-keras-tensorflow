@@ -35,6 +35,8 @@ git clone https://github.com/leriomaggio/deep-learning-keras-tensorflow.git
 
 ---
 
+## Table of Contents
+
 - **Part I**: **Introduction**
 
     - Intro to Artificial Neural Networks
@@ -52,7 +54,7 @@ git clone https://github.com/leriomaggio/deep-learning-keras-tensorflow.git
                 - Examples with `keras.models.Sequential` and `Dense`
             - Keras Backend
     
-- **Part II**: **Supervised Learning **
+- **Part II**: **Supervised Learning**
     
     - Fully Connected Networks and Embeddings
         - Intro to MNIST Dataset
