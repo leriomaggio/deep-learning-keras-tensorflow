@@ -4,11 +4,9 @@
 <div>
 <br>
 
-# Author: Valerio Maggio
+### Author: Valerio Maggio
 
-### _PostDoc Data Scientist @ FBK/MPBA_
-
-## Contacts:
+#### Contacts:
 
 <table style="border: 0px; display: inline-table">
     <tbody>
@@ -16,20 +14,14 @@
             <td style="border: 0px;">
                 <img src="imgs/twitter_small.png" style="display: inline-block;" /> 
                 <a href="http://twitter.com/leriomaggio" target="_blank">@leriomaggio</a>
-            </td>
-            <td style="border: 0px;">
-                <img src="imgs/gplus_small.png" style="display: inline-block;" /> 
-                <a href="http://plus.google.com/+ValerioMaggio" target="_blank">+ValerioMaggio</a>
-            </td>
-        </tr>
-        <tr style="border: 0px;">
+	    </td>
             <td style="border: 0px;">
                 <img src="imgs/linkedin_small.png" style="display: inline-block;" /> 
                 <a href="it.linkedin.com/in/valeriomaggio" target="_blank">valeriomaggio</a>
             </td>
             <td style="border: 0px;">
                 <img src="imgs/gmail_small.png" style="display: inline-block;" /> 
-                <a href="mailto:vmaggio@fbk.eu">vmaggio_at_fbk_dot_eu</a>
+                valeriomaggio_at_gmail
             </td>
        </tr>
   </tbody>
