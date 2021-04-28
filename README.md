@@ -74,7 +74,7 @@ git clone https://github.com/leriomaggio/deep-learning-keras-tensorflow.git
             - FC and MNIST
             - CNN and MNIST
         
-        - Deep Convolutiona Neural Networks with Keras (ref: `keras.applications`)
+        - Deep Convolutional Neural Networks with Keras (ref: `keras.applications`)
             - VGG16
             - VGG19
             - ResNet50
