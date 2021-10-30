@@ -17,7 +17,7 @@
 	    </td>
             <td style="border: 0px;">
                 <img src="imgs/linkedin_small.png" style="display: inline-block;" /> 
-                <a href="it.linkedin.com/in/valeriomaggio" target="_blank">valeriomaggio</a>
+                <a href="linkedin.com/in/valeriomaggio" target="_blank">valeriomaggio</a>
             </td>
             <td style="border: 0px;">
                 <img src="imgs/gmail_small.png" style="display: inline-block;" /> 
